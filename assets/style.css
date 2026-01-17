@@ -161,6 +161,16 @@ header .lead {
     border-color: #6366f1;
 }
 
+.btn-category[href="pages/disagio.html"] {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-color: #fbbf24;
+}
+
+.btn-category[href="pages/disagio.html"]:hover {
+    background: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%);
+    border-color: #f59e0b;
+}
+
 /* Pagina categoria */
 .category-header {
     margin-bottom: 3rem;
@@ -381,6 +391,126 @@ header .lead {
     animation: fadeIn 0.5s ease-out;
 }
 
+/* Password Protection */
+.password-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.password-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.password-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.password-box h2 {
+    margin-bottom: 1.5rem;
+    color: #212529;
+    font-weight: 300;
+    font-size: 1.75rem;
+}
+
+.password-box label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1.25rem;
+}
+
+.password-box input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.password-box button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.password-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.password-box .error-message {
+    color: #dc3545;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.password-box .error-message.show {
+    display: block;
+}
+
+/* Audio Player */
+.audio-player-container {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.audio-player-container h2 {
+    margin-bottom: 1.5rem;
+    color: #212529;
+    font-weight: 300;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.audio-player {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.audio-player audio {
+    width: 100%;
+    border-radius: 10px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .button-grid {
@@ -410,6 +540,14 @@ header .lead {
     }
     
     .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .password-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .password-box h2 {
         font-size: 1.5rem;
     }
 }
