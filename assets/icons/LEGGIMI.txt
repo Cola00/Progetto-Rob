@@ -1,0 +1,16 @@
+ICONE CONFIGURATE
+=================
+
+Le seguenti icone sono state configurate e funzionano correttamente:
+
+✓ icon-72x72.png - per dispositivi piccoli
+✓ icon-96x96.png - per dispositivi piccoli
+✓ icon-128x128.png - favicon del browser
+✓ icon-144x144.png - per dispositivi Android
+✓ icon-152x152.png - per dispositivi Android
+✓ icon-192x192.png - per Android e iOS (apple-touch-icon)
+✓ icon-384x384.png - per dispositivi Android
+✓ icon-512x512.png - per Android (alta risoluzione)
+
+Tutte le icone sono configurate nel manifest.json e nei file HTML.
+Il sito può essere aggiunto alla home come app!
